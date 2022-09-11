@@ -1,3 +1,14 @@
 .thumb {
     width: 180px;
 }
+
+.authorImage {
+    height: 35px;
+    width: 35px;
+}
+
+/* .news {
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
