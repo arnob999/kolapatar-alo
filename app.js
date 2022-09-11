@@ -164,7 +164,7 @@ const displayModal = (data) => {
     <br>
     <br>
 
-    <div class=" d-flex justify-content-between ">
+    <div class=" d-flex justify-content-around">
 
 
     <div class="d-flex ">
