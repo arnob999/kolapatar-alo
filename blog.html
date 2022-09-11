@@ -1,0 +1,152 @@
+DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KolaPatar Alo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Bs Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!--Navbar  -->
+    <header class=" container ">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand bg-info px-3 py-2 rounded-2 fw-semibold " href="#">
+                    <div class=" text-white ">
+                        <span class=" me-2 "><i class="bi bi-newspaper"></i></span><span
+                            class=" bg-warning rounded p-1  ">KolaPatar</span>
+                        <span class=" text-warning
+                        p-1 rounded ">
+                            Alo </span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-3 ms-auto mb-2 mb-lg-0 fw-semibold ">
+
+                        <li class="nav-item pe-3">
+                            <a class=" nav-link" href="index.html">News</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blogs</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <div class="mt-4 mb-4 w-75 ms-auto me-auto p-4 bg-opacity-25 rounded-3 bg-secondary">
+
+            <div class="mb-3">
+                1. Difference between var,let and const?
+            </div>
+
+            <div class="ms-4">
+                "var": It can be updated and re-declared into the scope. <br>
+                "let": It can be updated but cannot be re-declared into the scope. <br>
+                "const": It cannot be updated or re-declared into the scope. <br>
+
+            </div>
+
+
+        </div>
+
+        <div class="mt-4 mb-4 w-75 ms-auto me-auto p-4 bg-opacity-25 rounded-3 bg-secondary">
+
+            <div class="mb-3">
+                2.Difference between Arrow function vs Normal Function?
+            </div>
+
+            <div class="ms-4">
+                Unlike regular functions, arrow functions do not have their own this . The value of this inside an arrow
+                function remains the same throughout the lifecycle of the function and is always bound to the value of
+                this in the closest non-arrow parent function.
+
+            </div>
+
+
+        </div>
+
+
+        <div class="mt-4 mb-4 w-75 ms-auto me-auto p-4 bg-opacity-25 rounded-3 bg-secondary">
+
+            <div class="mb-3">
+                3. .forEach(), .map(), .filter() , .find() .... What's the difference?
+            </div>
+
+            <div class="ms-4">
+
+
+                .forEach(), is used to execute the same code on every element in an array but does not change the array
+                and it returns undefined.
+
+                .map() executes the same code on every element in an array and returns a new array with the updated
+                elements. <br><br>
+
+                .filter() checks every element in an array to see if it meets a certain criteria and returns a new array
+                with the elements that return truthy for the criteria. <br><br>
+
+                The find() method returns the first element in the provided array that satisfies the provided testing
+                function. If no values satisfy the testing function, undefined is returned. <br><br>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="mt-4 mb-4 w-75 ms-auto me-auto p-4 bg-opacity-25 rounded-3 bg-secondary">
+
+            <div class="mb-3">
+                4.
+                Why should we use template strings
+            </div>
+
+            <div class="ms-4">
+
+                Template strings are a powerful feature of modern JavaScript released in ES6.
+                It lets us insert/interpolate variables and expressions into strings without needing to concatenate like
+                in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic
+                elements.
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer class=" bg-black text-white pt-5 pb-3 mt-5">
+        <h2 class=" pb-4 text-center foot">KolaPatar Alo </h2>
+
+        <hr><br>
+        <div class=" mt-3 pb-4 d-flex justify-content-around ">
+            <small> Contact Us </small>
+            <small> Terms Of Service </small>
+            <small> Privacy Policy </small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

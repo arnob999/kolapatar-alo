@@ -10,3 +10,21 @@
 .counterClass {
     background-color: lightgray;
 }
+
+#ca {
+    background-color: rgba(216, 182, 189, 0.877);
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: 700;
+}
+
+.c01:hover,
+.c02:hover,
+.c03:hover,
+.c04:hover,
+.c05:hover,
+.c06:hover,
+.c07:hover,
+.c08:hover {
+    box-shadow: 1px 1px 15px grey;
+}

@@ -22,9 +22,10 @@ const displayCategory = (categories) => {
         const mainSection = document.getElementById("category");
 
         const catID = category.category_id;
+        console.log(`c${catID}`)
         makeDiv.innerHTML = `
   
-          <p onclick= "loadNews(${catID})" > 
+          <p id="ca" class="c${catID}" onclick= "loadNews(${catID})" > 
           ${category.category_name}
           </p>
   
@@ -99,7 +100,7 @@ const showNews = (newses) => {
                   ${news.details.slice(0, 250)}
               </div>
   
-              <div class=" author ">
+              <div class=" author mt-4 ">
                   <!-- info here -->
                   <div class=" d-flex justify-content-between ">
   
