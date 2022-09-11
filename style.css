@@ -7,8 +7,6 @@
     width: 35px;
 }
 
-/* .news {
-    white-space: wrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-} */
+.counterClass {
+    background-color: lightgray;
+}
