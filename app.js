@@ -18,11 +18,10 @@ loadCategory();
 const displayCategory = (categories) => {
     for (const category of categories) {
         const makeDiv = document.createElement("div");
-
+        makeDiv.classList.add("col")
         const mainSection = document.getElementById("category");
 
         const catID = category.category_id;
-        console.log(`c${catID}`)
         makeDiv.innerHTML = `
   
           <p id="ca" class="c${catID}" onclick= "loadNews(${catID})" > 
@@ -75,13 +74,11 @@ const showNews = (newses) => {
     newsSection.innerText = ``;
     for (const news of sortedItems) {
 
-
         const makeDiv = document.createElement("div");
         const thumbPic = news.thumbnail_url;
-        // console.log(news._id);
         makeDiv.innerHTML = `
          
-          <div class="p-3 rounded shadow mb-4 d-flex ">
+          <div class="p-3 rounded shadow mb-4 d-md-flex d-lg-flex ">
           <!-- picture div -->
           <div>
               <img class="thumb" src=${thumbPic}  alt="">
@@ -114,6 +111,8 @@ const showNews = (newses) => {
   
                           <span>
                           ${news.author.name ? news.author.name : "No Aurhor Found"}
+                          <br>
+                            ${news.author.published_date ? news.author.published_date : "No Data Found"}
                           </span>
   
                       </div>
@@ -176,11 +175,11 @@ const displayModal = (data) => {
         <div class="ps-1">
             <div>
                 <!-- author name -->
-                ${data.author.name}
+                ${data.author.name ? data.author.name : "No Author Found"}
             </div>
             <div>
                 <!-- date -->
-                ${data.author.published_date.slice(0, 11) ? data.author.published_date.slice(0, 11) : "No Author Found"}
+                ${data.author.published_date.slice(0, 11) ? data.author.published_date.slice(0, 11) : "No data found"}
             </div>
         </div>
 
