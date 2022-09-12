@@ -16,7 +16,9 @@ const loadCategory = () => {
 loadCategory();
 
 const displayCategory = (categories) => {
-    for (const category of categories) {
+    const categoryForEachDIv = categories
+
+    categoryForEachDIv.forEach(category => {
         const makeDiv = document.createElement("div");
         makeDiv.classList.add("col")
         const mainSection = document.getElementById("category");
@@ -24,14 +26,14 @@ const displayCategory = (categories) => {
         const catID = category.category_id;
         makeDiv.innerHTML = `
   
-          <p id="ca" class="c${catID}" onclick= "loadNews(${catID})" > 
+          <p id="ca" class="c${catID} w-100 " onclick= "loadNews(${catID})" > 
           ${category.category_name}
           </p>
   
           `;
 
         mainSection.appendChild(makeDiv);
-    }
+    })
 };
 
 //News From API
@@ -72,7 +74,7 @@ const showNews = (newses) => {
         return b.total_view - a.total_view;
     });
     newsSection.innerText = ``;
-    for (const news of sortedItems) {
+    sortedItems.forEach(news => {
 
         const makeDiv = document.createElement("div");
         const thumbPic = news.thumbnail_url;
@@ -85,7 +87,7 @@ const showNews = (newses) => {
           </div>
           <!-- news author etc part -->
           <div class=" p-4 ">
-  
+    
               <div class="title pb-4 fw-bolder ">
                   <!-- Title here -->
               
@@ -96,51 +98,51 @@ const showNews = (newses) => {
                   <!-- News Part -->
                   ${news.details.slice(0, 250)}
               </div>
-  
+    
               <div class=" author mt-4 ">
                   <!-- info here -->
                   <div class=" d-flex justify-content-between ">
-  
+    
                       <div class=" authorImg ">
                           <!-- author image -->
-  
+    
                           <span> 
                           <img class=" authorImage rounded-circle " src=" ${news.author.img} "
                           </span>
-  
-  
+    
+    
                           <span>
-                          ${news.author.name ? news.author.name : "No Aurhor Found"}
+                          ${news.author.name ? news.author.name : "No Data Found"}
                           <br>
-                            ${news.author.published_date ? news.author.published_date : "No Data Found"}
+                            ${news.author.published_date ? news.author.published_date.slice(0, 11) : "No Data Found"}
                           </span>
-  
+    
                       </div>
-  
+    
                       <div class="view">
-                      <i class="bi bi-eye-fill"></i>  ${news.total_view ? news.total_view : "No views"
+                      <i class="bi bi-eye-fill"></i>  ${news.total_view ? news.total_view : "No data found"
             }
                       </div>
-  
+    
                       <div class="rating">
                       <i class="bi bi-star-fill"></i> ${news.rating.number}
                       </div>
-  
-  
+    
+    
          
                       <!-- Button trigger modal -->
-  <button type="button" onclick= "loadModal('${news._id
+    <button type="button" onclick= "loadModal('${news._id
             }')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     See Details <i class=" ps-2 bi bi-arrow-right-circle-fill"></i>
-  </button>
-  
-  <!-- Modal -->
-  
-  
-  
+    </button>
+    
+    <!-- Modal -->
+    
+    
+    
          `;
         newsSection.appendChild(makeDiv);
-    }
+    })
     toggler(false);
 };
 const loadModal = (newsID) => {
@@ -175,11 +177,11 @@ const displayModal = (data) => {
         <div class="ps-1">
             <div>
                 <!-- author name -->
-                ${data.author.name ? data.author.name : "No Author Found"}
+                ${data.author.name ? data.author.name : "No data available"}
             </div>
             <div>
                 <!-- date -->
-                ${data.author.published_date.slice(0, 11) ? data.author.published_date.slice(0, 11) : "No data found"}
+                ${data.author.published_date.slice(0, 11) ? data.author.published_date.slice(0, 11) : "No data available"}
             </div>
         </div>
 
